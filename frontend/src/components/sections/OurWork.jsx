@@ -1,168 +1,365 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import { motion, useInView } from 'framer-motion';
-import powerfit from '../../assets/im1.png';
-import automotora from '../../assets/im2.png';
-import terrazas from '../../assets/im3.png';
-
-const slides = [
-  { image: terrazas, alt: 'Proyecto Terrazas - Diseño web premium' },
-  { image: automotora, alt: 'Automotora Virtual - Plataforma de ventas' },
-  { image: powerfit, alt: 'PowerFit - Aplicación fitness interactiva' },
-];
 
 export default function WhatWeDo() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState(1);
-  const [trafficData, setTrafficData] = useState([30, 45, 60, 90, 120, 150, 180]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTrafficData(prev => {
-        const newData = [...prev];
-        const lastValue = newData[newData.length - 1];
-        newData.shift();
-        newData.push(Math.max(50, lastValue + (Math.random() * 40 - 20)));
-        return newData;
-      });
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Normalizamos los datos para el SVG
-  const normalizedData = trafficData.map(v => {
-    const clamped = Math.max(0, Math.min(v, 200));
-    return 100 - ((clamped / 200) * 80 + 10); // escala vertical de 10 a 90
-  });
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <section
       ref={ref}
-      className="w-full min-h-screen bg-gray-950 text-white px-6 py-24 flex items-center justify-center relative overflow-hidden"
+      className="w-full bg-gray-950 text-white px-6 py-24 flex flex-col items-center justify-center relative overflow-hidden"
     >
-      {/* Efectos de fondo similares a Who We Are */}
+      {/* FONDO MEJORADO */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-600 blur-3xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/3 w-80 h-80 rounded-full bg-blue-800 blur-3xl opacity-15 animate-pulse delay-300"></div>
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-indigo-900 blur-3xl opacity-10 animate-pulse delay-500"></div>
       </div>
 
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-        {/* LEFT TEXT */}
+      {/* SECCIÓN PRINCIPAL */}
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10 mb-32">
+        {/* LEFT - FILOSOFÍA Y SERVICIOS */}
         <motion.div
           className="space-y-8"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <div className="space-y-4">
-            <span className="inline-block px-4 py-2 bg-blue-900/30 text-blue-400 rounded-full text-sm font-medium tracking-wider">
-              NUESTRO IMPACTO
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold leading-snug text-white">
-              Soluciones digitales que generan <span className="text-blue-400">resultados medibles</span>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+              Nuestra <span className="text-blue-400">filosofía</span> de desarrollo
             </h2>
-            <p className="text-gray-300 text-lg max-w-xl leading-relaxed">
-              En KIAD no solo creamos sitios web, construimos sistemas que impulsan el crecimiento de tu negocio con datos reales.
+            <p className="text-gray-400 mt-2">
+              En KIAD no solo creamos sitios web, construimos ecosistemas digitales completos.
             </p>
           </div>
 
-          <div className="flex flex-col space-y-4">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mt-1">
-                <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+          <ul className="space-y-6 border-l-2 border-blue-500 pl-6">
+            <li>
+              <h4 className="font-semibold text-white mb-1">01. Escucha activa</h4>
+              <p className="text-gray-400 text-sm">
+                Comenzamos cada proyecto entendiendo tu visión, necesidades y objetivos de negocio.
+              </p>
+            </li>
+            <li>
+              <h4 className="font-semibold text-white mb-1">02. Diseño con propósito</h4>
+              <p className="text-gray-400 text-sm">
+                No hacemos solo interfaces bonitas: creamos experiencias que convierten y generan resultados.
+              </p>
+            </li>
+            <li>
+              <h4 className="font-semibold text-white mb-1">03. Código que escala</h4>
+              <p className="text-gray-400 text-sm">
+                Construimos arquitecturas sólidas listas para crecer contigo, con tecnología de punta.
+              </p>
+            </li>
+            <li>
+              <h4 className="font-semibold text-white mb-1">04. Entrega y mejora continua</h4>
+              <p className="text-gray-400 text-sm">
+                Lanzamos rápido, aprendemos de los datos y optimizamos con inteligencia artificial.
+              </p>
+            </li>
+          </ul>
+
+          {/* NUEVA SECCIÓN DE SERVICIOS */}
+          <div className="pt-6">
+            <h3 className="text-xl font-semibold text-white mb-4">Nuestros <span className="text-blue-400">servicios</span></h3>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+                <div className="w-8 h-8 bg-blue-500/10 rounded-full flex items-center justify-center mb-2">
+                  <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <h4 className="text-sm font-medium">Desarrollo Web</h4>
+                <p className="text-xs text-gray-400 mt-1">Sitios a medida y plataformas complejas</p>
               </div>
-              <div className="ml-4">
-                <h4 className="text-white font-medium">Crecimiento orgánico</h4>
-                <p className="text-gray-400 text-sm mt-1">Estrategias SEO que aumentan tu visibilidad y tráfico cualificado.</p>
+              <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+                <div className="w-8 h-8 bg-purple-500/10 rounded-full flex items-center justify-center mb-2">
+                  <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                  </svg>
+                </div>
+                <h4 className="text-sm font-medium">Cloud Solutions</h4>
+                <p className="text-xs text-gray-400 mt-1">Infraestructura escalable en la nube</p>
               </div>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mt-1">
-                <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+                <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center mb-2">
+                  <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h4 className="text-sm font-medium">Seguridad</h4>
+                <p className="text-xs text-gray-400 mt-1">Protección avanzada para tu negocio</p>
               </div>
-              <div className="ml-4">
-                <h4 className="text-white font-medium">Experiencia fluida</h4>
-                <p className="text-gray-400 text-sm mt-1">Diseños optimizados que mantienen a tus visitantes comprometidos.</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mt-1">
-                <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-              </div>
-              <div className="ml-4">
-                <h4 className="text-white font-medium">Conversión inteligente</h4>
-                <p className="text-gray-400 text-sm mt-1">Técnicas comprobadas que transforman visitantes en clientes.</p>
+              <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+                <div className="w-8 h-8 bg-yellow-500/10 rounded-full flex items-center justify-center mb-2">
+                  <svg className="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <h4 className="text-sm font-medium">Analítica</h4>
+                <p className="text-xs text-gray-400 mt-1">Datos para tomar mejores decisiones</p>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* RIGHT - WIDGET DE TRÁFICO */}
+        {/* RIGHT - KPI / CTA MEJORADO */}
         <motion.div
           className="relative w-full max-w-xl mx-auto"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-blue-800/10 rounded-xl" />
+          <div className="relative bg-gray-800/60 backdrop-blur-md border border-gray-700 rounded-xl p-8 shadow-xl">
+            <div className="text-center mb-8">
+              <p className="text-xl sm:text-2xl text-white font-bold mb-2">+20 proyectos lanzados</p>
+              <p className="text-sm text-gray-400">desde Latinoamérica para el mundo</p>
+            </div>
 
-          <div className="relative bg-gray-800/60 backdrop-blur-md border border-gray-700 rounded-xl p-6 shadow-xl z-10">
-            <div className="flex justify-between items-start mb-6">
-              <div>
-                <h3 className="text-white font-semibold text-lg">Tráfico en tiempo real</h3>
-                <p className="text-blue-400 text-sm">Últimos 7 días</p>
+            {/* NUEVO: ESTADÍSTICAS */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="bg-gray-700/30 p-4 rounded-lg">
+                <div className="text-2xl font-bold text-blue-400 mb-1">100%</div>
+                <div className="text-xs text-gray-400">Clientes satisfechos</div>
               </div>
-              <div className="text-right">
-                <div className="text-2xl font-bold text-white">+42%</div>
-                <p className="text-green-400 text-xs">vs. período anterior</p>
+              <div className="bg-gray-700/30 p-4 rounded-lg">
+                <div className="text-2xl font-bold text-green-400 mb-1">24/7</div>
+                <div className="text-xs text-gray-400">Soporte activo</div>
+              </div>
+              <div className="bg-gray-700/30 p-4 rounded-lg">
+                <div className="text-2xl font-bold text-purple-400 mb-1">x3</div>
+                <div className="text-xs text-gray-400">Rendimiento mejorado</div>
+              </div>
+              <div className="bg-gray-700/30 p-4 rounded-lg">
+                <div className="text-2xl font-bold text-yellow-400 mb-1">99.9%</div>
+                <div className="text-xs text-gray-400">Uptime garantizado</div>
               </div>
             </div>
 
-            <div className="h-40 relative">
-              <svg 
-                className="w-full h-full"
-                viewBox="0 0 300 100"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d={`M0,${normalizedData[0]} ${normalizedData.map((val, i) => `L${i * (300 / (normalizedData.length - 1))},${val}`).join(' ')}`}
-                  stroke="#3B82F6"
-                  strokeWidth="2"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                <path
-                  d={`M0,${normalizedData[0]} ${normalizedData.map((val, i) => `L${i * (300 / (normalizedData.length - 1))},${val}`).join(' ')} L300,100 L0,100 Z`}
-                  fill="url(#gradient)"
-                  fillOpacity="0.2"
-                />
-                <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#3B82F6" />
-                    <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-              </svg>
-
-              <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-gray-400">
-                {['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((day, i) => (
-                  <span key={i}>{day}</span>
-                ))}
+            {/* NUEVO: CASO DE ÉXITO */}
+            <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-800 mb-6">
+              <div className="flex items-start">
+                <div className="bg-blue-500/10 p-2 rounded-lg mr-3">
+                  <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-white mb-1">Caso de éxito</h4>
+                  <p className="text-xs text-gray-400">
+                    Impulsamos la presencia digital de +10 devs con portfolios modernos y efectivos.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="mt-4 flex justify-between items-center">
-              <div className="text-sm text-gray-300">
-                <span className="text-white font-medium">{trafficData[trafficData.length - 1].toFixed(1)}K</span> visitas hoy
-              </div>
-              <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition">
-                Ver detalles →
-              </button>
+            <div className="flex flex-col sm:flex-row gap-3">
+            </div>
+          </div>
+
+          {/* NUEVO: TECNOLOGÍAS */}
+          <div className="mt-8 bg-gray-800/40 rounded-lg p-6 border border-gray-700">
+            <h4 className="text-sm font-semibold text-white mb-4 text-center">Tecnologías que dominamos</h4>
+            <div className="flex flex-wrap justify-center gap-3">
+              {['React', 'Next.js', 'Node', 'AWS', 'Docker', 'GraphQL', 'MongoDB', 'PostgreSQL', 'Kubernetes', 'TensorFlow'].map((tech) => (
+                <span key={tech} className="px-3 py-1 bg-gray-700/50 text-xs rounded-full text-gray-300 border border-gray-600">
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
         </motion.div>
       </div>
+
+      {/* SECCIÓN DE METODOLOGÍA */}
+      {/* SECCIÓN DE METODOLOGÍA MEJORADA */}
+      <div className="max-w-7xl w-full py-24 px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Nuestra <span className="text-blue-400">metodología</span> en 4 fases
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Un proceso probado que garantiza resultados excepcionales en cada proyecto
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Línea de tiempo decorativa animada */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 1.5 }}
+            className="hidden md:block absolute h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent top-1/4 left-0 right-0 -translate-y-1/2 origin-left"
+          />
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Discover",
+                icon: (
+                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                ),
+                desc: "Análisis profundo de tu mercado, competencia y objetivos de negocio",
+                color: "from-blue-500/10 to-blue-800/5"
+              },
+              {
+                title: "Design",
+                icon: (
+                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  </svg>
+                ),
+                desc: "Prototipado interactivo centrado en experiencia de usuario y conversión",
+                color: "from-purple-500/10 to-purple-800/5"
+              },
+              {
+                title: "Develop",
+                icon: (
+                  <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                ),
+                desc: "Implementación ágil con sprints semanales y entregas constantes",
+                color: "from-green-500/10 to-green-800/5"
+              },
+              {
+                title: "Deploy",
+                icon: (
+                  <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4 4m-4-4l4-4m11 4a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                desc: "Lanzamiento monitorizado con optimización continua basada en datos",
+                color: "from-yellow-500/10 to-yellow-800/5"
+              }
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                className={`bg-gradient-to-br ${step.color} p-6 rounded-xl border border-gray-700 relative z-10 shadow-lg hover:shadow-xl transition-all`}
+              >
+                <div className="w-12 h-12 rounded-full bg-gray-800/50 flex items-center justify-center mb-4 mx-auto">
+                  {step.icon}
+                </div>
+                <h3 className="font-bold text-xl text-center mb-3">{step.title}</h3>
+                <p className="text-gray-300 text-sm text-center">{step.desc}</p>
+                <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 text-gray-600 text-xs font-mono">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* SECCIÓN DE EQUIPO MEJORADA */}
+      <div className="max-w-7xl w-full py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Conoce al <span className="text-blue-400">equipo</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Los expertos que harán realidad tu visión digital
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                name: "Tomás",
+                role: "CEO & Backend Lead",
+                specialty: "Arquitectura Cloud & API Development",
+                funFact: "Cofundador de KIAD",
+                expertise: ["Node.js", "PostgreSQL", "Microservicios"],
+                icon: (
+                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                  </svg>
+                )
+              },
+              {
+                name: "Ignacio",
+                role: "COO & Product Ops",
+                specialty: "Organización técnica & visión estructural",
+                funFact: "Cofundador de KIAD",
+                expertise: ["Frontend Structure", "Tech Ops", "Delivery Management"],
+                icon: (
+                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Gonzalo",
+                role: "CXO & Visual Experience",
+                specialty: "UX/UI & planificación de proyectos",
+                funFact: "Cofundador de KIAD",
+                expertise: ["Design Systems", "Project Planning", "Cient UX"],
+                icon: (
+                  <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                )
+              },
+              {
+                name: "Máximo",
+                role: "Growth & Marketing Strategist",
+                specialty: "Estrategias para atraer clientes y hacer crecer la marca",
+                funFact: "Especialista en adquisición & funnels",
+                expertise: ["ADS & SEO", "LEAD Generation", "Copywriting"],
+                icon: (
+                  <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                )
+              }
+            ].map((member, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 text-center relative overflow-hidden group"
+              >
+                {/* Efecto de fondo */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Avatar */}
+                <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-gray-700 to-gray-800 mb-4 flex items-center justify-center text-2xl border border-gray-600 group-hover:border-blue-400 transition-all">
+                  {member.icon}
+                </div>
+
+                {/* Info principal */}
+                <h3 className="font-bold text-xl mb-1">{member.name}</h3>
+                <p className="text-blue-400 text-sm mb-2">{member.role}</p>
+                <p className="text-gray-300 text-sm mb-3">{member.specialty}</p>
+
+                {/* Hover content */}
+                <div className="mt-4 pt-4 border-t border-gray-700/50 group-hover:border-gray-600 transition-all">
+                  <p className="text-xs text-gray-400 mb-3">{member.funFact}</p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {member.expertise.map((skill, j) => (
+                      <span key={j} className="px-2 py-1 bg-gray-700/30 text-xs rounded-full text-gray-300">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
-}
+} 
