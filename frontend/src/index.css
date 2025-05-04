@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+@theme inline {
+    --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+    @keyframes scroll {
+        to {
+        transform: translate(calc(-50% - 0.5rem));
+        }
+    }
+}
+
+@theme {
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-playfair: "Playfair Display", sans-serif;
+}
+
