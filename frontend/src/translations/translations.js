@@ -1,5 +1,5 @@
 const translations = {
-    
+
     ES: {
         home: 'Inicio',
         whoweare: '¿Quiénes somos?',
@@ -7,11 +7,17 @@ const translations = {
         portfolio: 'Portfolio',
         contact: 'Contacto',
 
+
+        whatWeDo_teamTitle: "Conoce al <span class=\"text-blue-400\">equipo</span>",
+        whatWeDo_teamSubtitle: "Los expertos que harán realidad tu visión digital",
+
+        whatWeDo_processTitle: "Nuestra <span class='text-blue-400'>metodología</span> en 4 fases",
+        whatWeDo_processSubtitle: "Un proceso probado que garantiza resultados excepcionales en cada proyecto.",
         discoverServices: 'Descubre nuestros servicios',
         headline1: 'Adaptamos Tecnología',
         headline2: 'Impulsamos Negocios',
         paragraph: 'Creamos soluciones digitales modernas y escalables para empresas, emprendedores y profesionales que buscan presencia real en lo digital.',
-        
+        whatWeDo_technologiesTitle: 'Tecnologías que dominamos',
         startupFocus: 'es una startup enfocada en el desarrollo de software',
         offerSolutions: 'Ofrecemos soluciones digitales inteligentes, construidas por desarrolladores que entienden lo que importa.',
         weCombine: 'Unimos experiencia, estrategia y código',
@@ -60,6 +66,219 @@ const translations = {
         errorMessage: '¡Algo salió mal!',
 
         motto: 'Donde el código preciso impulsa ambiciones empresariales.',
+
+        //WHAT WE DO
+
+        digitalPower: "POTENCIA DIGITAL",
+        transformBusiness: "Transformamos negocios con",
+        webSolutions: "soluciones web",
+        kiadDescription: "En <strong>KIAD</strong> desarrollamos plataformas digitales que generan <span>resultados medibles</span> y crecimiento sostenido para tu empresa.",
+        talkAboutProject: "Hablemos de tu proyecto",
+
+
+        //WHO WE ARE
+
+        controlPresence: "Controla y optimiza tu",
+        digitalPresence: "presencia digital",
+        realTime: "en tiempo real",
+        kiadTransformation: "Con KIAD transformamos semanas de desarrollo en cuestión de horas. Nuestra plataforma automatiza los procesos técnicos mientras tú te enfocas en hacer crecer tu negocio.",
+
+        features: [
+            {
+                title: "Diseño profesional",
+                description: "Más de 40 plantillas premium adaptables. Cada diseño está optimizado para conversión y rendimiento."
+            },
+            {
+                title: "Implementación express",
+                description: "Tu sitio online en tiempo récord, con todas las funcionalidades que tu negocio necesita."
+            }
+        ],
+
+
+        widgetTitles: {
+            deployedSite: "Sitio desplegado",
+            performance: "Rendimiento",
+            quickSetup: "Configuración rápida",
+            support: "Soporte 24/7",
+            protection: "Protección activa"
+        },
+
+        widgetContent: {
+            siteStatus: "Online - Actualizado hace 3 min",
+            visits: "Visitas:",
+            conversion: "Conversión:",
+            lastWeek: "+17% vs semana pasada",
+            activeDesign: "Diseño activado",
+            activeSections: "3 secciones activas",
+            inactiveBlog: "Blog (inactivo)",
+            techSupport: "Asistencia técnica",
+            availableNow: "Disponible ahora",
+            firewallActive: "Firewall activo",
+            monitoredSystem: "Sistema monitorizado 24/7"
+        },
+
+        widgetButtons: {
+            viewLive: "Ver sitio en vivo",
+            customize: "Personalizar",
+            contact: "Contactar",
+            moreInfo: "Más info"
+        },
+
+        ctaButton: "Descubre cómo podemos ayudarte →",
+
+
+        benefits: [
+            {
+                title: "Diseño web premium",
+                desc: "Sitios responsive que se adaptan perfectamente a cualquier dispositivo"
+            },
+            {
+                title: "SEO avanzado",
+                desc: "Posicionamos tu marca en los primeros resultados de búsqueda"
+            },
+            {
+                title: "Tecnología de punta",
+                desc: "React, Next.js, Tailwind CSS y las últimas herramientas del mercado"
+            },
+            {
+                title: "Rendimiento garantizado",
+                desc: "Webs ultrarrápidas con optimización de Core Web Vitals"
+            }
+        ],
+
+        slideAlts: [
+            "Proyecto Terrazas - Diseño web premium",
+            "Automotora Virtual - Plataforma de ventas",
+            "PowerFit - Aplicación fitness interactiva"
+        ],
+
+        slideControls: {
+            previous: "Slide anterior",
+            next: "Siguiente slide",
+            goToSlide: "Ir al slide"
+        },
+
+        // WHAT WE DO - NUEVAS CLAVES
+
+        whatWeDo_title: "Nuestra <span class='text-blue-400'>filosofía</span> de desarrollo",
+        whatWeDo_subtitle: "En KIAD no solo creamos sitios web, construimos ecosistemas digitales completos.",
+        whatWeDo_servicesTitle: "Nuestros servicios",
+        whatWeDo_methodologyTitle: "Nuestra metodología en 4 fases",
+        whatWeDo_methodologyDesc: "Un proceso probado que garantiza resultados excepcionales en cada proyecto",
+        whatWeDo_teamDesc: "Los expertos que harán realidad tu visión digital",
+        whatWeDo_kpiTitle: "+20 proyectos lanzados",
+        whatWeDo_kpiSubtitle: "desde Latinoamérica para el mundo",
+        whatWeDo_successCaseTitle: "Caso de éxito",
+        whatWeDo_successCaseDesc: "Impulsamos la presencia digital de +10 devs con portfolios modernos y efectivos.",
+        whatWeDo_technologies: "Tecnologías que dominamos",
+
+        whatWeDo_steps: [
+            {
+                title: "01. Escucha activa",
+                description: "Comenzamos cada proyecto entendiendo tu visión, necesidades y objetivos de negocio."
+            },
+            {
+                title: "02. Diseño con propósito",
+                description: "No hacemos solo interfaces bonitas: creamos experiencias que convierten y generan resultados."
+            },
+            {
+                title: "03. Código que escala",
+                description: "Construimos arquitecturas sólidas listas para crecer contigo, con tecnología de punta."
+            },
+            {
+                title: "04. Entrega y mejora continua",
+                description: "Lanzamos rápido, aprendemos de los datos y optimizamos con inteligencia artificial."
+            }
+        ],
+
+        whatWeDo_services: [
+            {
+                title: "Desarrollo Web",
+                description: "Sitios a medida y plataformas complejas"
+            },
+            {
+                title: "Cloud Solutions",
+                description: "Infraestructura escalable en la nube"
+            },
+            {
+                title: "Seguridad",
+                description: "Protección avanzada para tu negocio"
+            },
+            {
+                title: "Analítica",
+                description: "Datos para tomar mejores decisiones"
+            }
+        ],
+
+        whatWeDo_stats: [
+            {
+
+                label: "Clientes satisfechos"
+            },
+            {
+
+                label: "Soporte activo"
+            },
+            {
+
+                label: "Rendimiento mejorado"
+            },
+            {
+
+                label: "Uptime garantizado"
+            }
+        ],
+
+        whatWeDo_process: [
+            {
+                title: "Discover",
+                description: "Análisis profundo de tu mercado, competencia y objetivos de negocio"
+            },
+            {
+                title: "Design",
+                description: "Prototipado interactivo centrado en experiencia de usuario y conversión"
+            },
+            {
+                title: "Develop",
+                description: "Implementación ágil con sprints semanales y entregas constantes"
+            },
+            {
+                title: "Deploy",
+                description: "Lanzamiento monitorizado con optimización continua basada en datos"
+            }
+        ],
+
+        whatWeDo_team: [
+            {
+                name: "Tomás",
+                role: "CEO & Backend Lead",
+                specialty: "Arquitectura Cloud & API Development",
+                funFact: "Cofundador de KIAD",
+                expertise: ["Node.js", "PostgreSQL", "Microservicios"]
+            },
+            {
+                name: "Ignacio",
+                role: "COO & Product Ops",
+                specialty: "Organización técnica & visión estructural",
+                funFact: "Cofundador de KIAD",
+                expertise: ["Frontend Structure", "Tech Ops", "Delivery Management"]
+            },
+            {
+                name: "Gonzalo",
+                role: "CXO & Visual Experience",
+                specialty: "UX/UI & planificación de proyectos",
+                funFact: "Cofundador de KIAD",
+                expertise: ["Design Systems", "Project Planning", "Client UX"]
+            },
+            {
+                name: "Máximo",
+                role: "Growth & Marketing Strategist",
+                specialty: "Estrategias para atraer clientes y hacer crecer la marca",
+                funFact: "Especialista en adquisición & funnels",
+                expertise: ["ADS & SEO", "LEAD Generation", "Copywriting"]
+            }
+        ]
+
     },
 
     EN: {
@@ -69,11 +288,14 @@ const translations = {
         portfolio: 'Portfolio',
         contact: 'Contact',
 
+        whatWeDo_kpiTitle: "+20 projects launched",
+        whatWeDo_kpiSubtitle: "from Latin America to the world",
+
         discoverServices: 'Discover Our Services',
         headline1: 'We Adapt Technology',
         headline2: 'We Boost Businesses',
         paragraph: 'We create modern, scalable digital solutions for companies, entrepreneurs, and professionals seeking a real digital presence.',
-        
+
         startupFocus: 'is a startup focused on software development',
         offerSolutions: 'We offer intelligent digital solutions, built by developers who understand what matters.',
         weCombine: 'We combine experience, strategy, and code',
@@ -121,7 +343,196 @@ const translations = {
         successMessage: 'Message Sent!',
         errorMessage: 'Something went wrong!',
 
-        motto: 'Where precision code fuels business ambitions.', 
+        motto: 'Where precision code fuels business ambitions.',
+
+        //WHAT WE DO
+        digitalPower: "DIGITAL POWER",
+        transformBusiness: "We transform businesses with",
+        webSolutions: "web solutions",
+        kiadDescription: "At <strong>KIAD</strong> we develop digital platforms that generate <span>measurable results</span> and sustained growth for your company.",
+        talkAboutProject: "Let's talk about your project",
+
+        benefits: [
+            {
+                title: "Premium web design",
+                desc: "Responsive sites that perfectly adapt to any device"
+            },
+            {
+                title: "Advanced SEO",
+                desc: "We position your brand in the top search results"
+            },
+            {
+                title: "Cutting-edge technology",
+                desc: "React, Next.js, Tailwind CSS and the latest market tools"
+            },
+            {
+                title: "Guaranteed performance",
+                desc: "Ultra-fast websites with Core Web Vitals optimization"
+            }
+        ],
+
+        slideAlts: [
+            "Terrazas Project - Premium web design",
+            "Virtual Car Dealership - Sales platform",
+            "PowerFit - Interactive fitness application"
+        ],
+
+        slideControls: {
+            previous: "Previous slide",
+            next: "Next slide",
+            goToSlide: "Go to slide"
+        },
+
+        controlPresence: "Control and optimize your",
+        digitalPresence: "digital presence",
+        realTime: "in real time",
+        kiadTransformation: "With KIAD we transform weeks of development into a matter of hours. Our platform automates technical processes while you focus on growing your business.",
+
+        features: [
+            {
+                title: "Professional design",
+                description: "Over 40 premium adaptable templates. Each design is optimized for conversion and performance."
+            },
+            {
+                title: "Express implementation",
+                description: "Your site online in record time, with all the functionalities your business needs."
+            }
+        ],
+
+        widgetTitles: {
+            deployedSite: "Deployed site",
+            performance: "Performance",
+            quickSetup: "Quick setup",
+            support: "24/7 Support",
+            protection: "Active protection"
+        },
+
+        widgetContent: {
+            siteStatus: "Online - Updated 3 min ago",
+            visits: "Visits:",
+            conversion: "Conversion:",
+            lastWeek: "+17% vs last week",
+            activeDesign: "Design activated",
+            activeSections: "3 active sections",
+            inactiveBlog: "Blog (inactive)",
+            techSupport: "Technical support",
+            availableNow: "Available now",
+            firewallActive: "Firewall active",
+            monitoredSystem: "System monitored 24/7"
+        },
+
+        widgetButtons: {
+            viewLive: "View live site",
+            customize: "Customize",
+            contact: "Contact",
+            moreInfo: "More info"
+        },
+
+        ctaButton: "Discover how we can help you →",
+
+        whatWeDo_title: "Our <span class='text-blue-400'>development</span> philosophy",
+        whatWeDo_subtitle: "At KIAD, we don't just build websites – we build digital ecosystems.",
+        whatWeDo_steps: [
+            {
+                title: "01. Active Listening",
+                description: "We start every project by understanding your vision, needs, and business goals."
+            },
+            {
+                title: "02. Purposeful Design",
+                description: "We don't just create pretty interfaces—we craft experiences that convert and deliver results."
+            },
+            {
+                title: "03. Scalable Code",
+                description: "We build solid architectures ready to grow with you using cutting-edge technology."
+            },
+            {
+                title: "04. Continuous Delivery & Improvement",
+                description: "We launch fast, learn from data, and optimize with artificial intelligence."
+            }
+        ],
+        whatWeDo_servicesTitle: "Our <span class='text-blue-400'>services</span>",
+        whatWeDo_services: [
+            {
+                title: "Web Development",
+                description: "Custom sites and complex platforms"
+            },
+            {
+                title: "Cloud Solutions",
+                description: "Scalable cloud infrastructure"
+            },
+            {
+                title: "Security",
+                description: "Advanced protection for your business"
+            },
+            {
+                title: "Analytics",
+                description: "Data to make better decisions"
+            }
+        ],
+        whatWeDo_successCaseTitle: "Success story",
+        whatWeDo_successCaseDesc: "We boosted the digital presence of 10+ developers with modern, effective portfolios.",
+        whatWeDo_stats: [
+            { label: "Happy clients", value: "100%" },
+            { label: "Active support", value: "24/7" },
+            { label: "Performance boost", value: "x3" },
+            { label: "Guaranteed uptime", value: "99.9%" }
+        ],
+        whatWeDo_technologiesTitle: "Technologies we master",
+        whatWeDo_processTitle: "Our <span class='text-blue-400'>methodology</span> in 4 phases",
+        whatWeDo_processSubtitle: "A proven process that guarantees exceptional results in every project.",
+        whatWeDo_process: [
+            {
+                title: "Discover",
+                description: "Deep analysis of your market, competitors, and business objectives"
+            },
+            {
+                title: "Design",
+                description: "Interactive prototyping focused on user experience and conversion"
+            },
+            {
+                title: "Develop",
+                description: "Agile implementation with weekly sprints and continuous deliveries"
+            },
+            {
+                title: "Deploy",
+                description: "Monitored launch with data-driven continuous optimization"
+            }
+        ],
+        whatWeDo_teamTitle: "Meet the <span class='text-blue-400'>team</span>",
+        whatWeDo_teamSubtitle: "The experts who will bring your digital vision to life.",
+        whatWeDo_team: [
+            {
+                name: "Tomás",
+                role: "CEO & Backend Lead",
+                specialty: "Cloud Architecture & API Development",
+                funFact: "Co-founder of KIAD",
+                expertise: ["Node.js", "PostgreSQL", "Microservices"]
+            },
+            {
+                name: "Ignacio",
+                role: "COO & Product Ops",
+                specialty: "Tech organization & structural vision",
+                funFact: "Co-founder of KIAD",
+                expertise: ["Frontend Structure", "Tech Ops", "Delivery Management"]
+            },
+            {
+                name: "Gonzalo",
+                role: "CXO & Visual Experience",
+                specialty: "UX/UI & project planning",
+                funFact: "Co-founder of KIAD",
+                expertise: ["Design Systems", "Project Planning", "Client UX"]
+            },
+            {
+                name: "Máximo",
+                role: "Growth & Marketing Strategist",
+                specialty: "Client acquisition & brand growth strategies",
+                funFact: "Specialist in acquisition & funnels",
+                expertise: ["ADS & SEO", "LEAD Generation", "Copywriting"],
+
+            },
+
+        ]
+
     },
 
     PT: {
@@ -130,12 +541,15 @@ const translations = {
         services: 'Serviços',
         portfolio: 'Portfólio',
         contact: 'Contato',
-    
+
+        whatWeDo_kpiTitle: "+20 projetos lançados",
+        whatWeDo_kpiSubtitle: "da América Latina para o mundo",
+
         discoverServices: 'Descubra Nossos Serviços',
         headline1: 'Adaptamos tecnologia',
         headline2: 'Impulsionamos Negócios',
         paragraph: 'Criamos soluções digitais modernas e escaláveis para empresas, empreendedores e profissionais que buscam presença real no digital.',
-    
+
         startupFocus: 'é uma startup focada no desenvolvimento de software',
         offerSolutions: 'Oferecemos soluções digitais inteligentes, construídas por desenvolvedores que entendem o que realmente importa.',
         weCombine: 'Unimos experiência, estratégia e código',
@@ -154,7 +568,7 @@ const translations = {
         weWork: 'Trabalhamos com processos claros, comunicação constante e resultados mensuráveis. Você sempre saberá onde está, sem surpresas.',
         closeness: 'Proximidade',
         weCare: 'Nos importamos com como você se sente durante todo o processo. Estamos presentes antes, durante e depois. Porque além do software, nos importamos com você.',
-    
+
         service: 'Serviços',
         digitalPresence: 'Presença Digital Profissional',
         businesses: 'Muitos negócios enfrentam o problema de ter sites desatualizados, mal projetados ou até mesmo de não possuir presença online. Para resolver isso, desenvolvemos landing pages atraentes e modernas, lojas virtuais totalmente funcionais e adaptadas às suas necessidades, além de garantir uma ótima implementação de SEO e compatibilidade mobile.',
@@ -168,12 +582,12 @@ const translations = {
         manyBusinessesandProfessionals: 'Muitos negócios e profissionais limitam-se a operar apenas pelo Instagram ou WhatsApp, perdendo clientes e oportunidades de venda. Nós resolvemos isso criando uma landing page profissional com seus serviços/cardápio, implementando um sistema de reservas ou pedidos online e desenvolvendo um e-commerce integrado para que possam vender facilmente seus produtos (suplementos, ingressos, planos ou qualquer outro item).',
         webSecurity: 'Segurança e Proteção Web',
         manyWebsites: 'Muitos sites não possuem proteção adequada contra ameaças digitais, colocando em risco tanto as informações do negócio quanto as dos clientes. Na KIAD, implementamos medidas de segurança robustas: certificados SSL, firewalls, sistemas anti-spam e proteção contra ataques como injeções SQL ou DDoS. Também configuramos políticas de privacidade, avisos legais e adaptamos seu site às regulamentações como a LGPD, garantindo uma experiência segura, profissional e confiável para seus visitantes.',
-    
+
         weTransform: 'Transformamos ideias em experiências digitais reais.',
-    
+
         ourProjects: 'Nossos Projetos',
         learnAbout: 'Conheça alguns dos projetos que desenvolvemos na KIAD. Desde experiências visuais impactantes até soluções funcionais que demonstram nosso potencial e criatividade.',
-    
+
         contactUs: 'Fale Conosco',
         completeTheForm: 'Preencha o formulário e entraremos em contato para entender suas necessidades e ajudá-lo a atingir seus objetivos.',
         name: 'Nome...',
@@ -182,9 +596,196 @@ const translations = {
         send: 'Enviar',
         successMessage: 'Mensagem enviada!',
         errorMessage: 'Algo deu errado!',
-    
+
         motto: 'Onde o código preciso impulsiona ambições empresariais.',
-    },    
+
+        digitalPower: "POTÊNCIA DIGITAL",
+        transformBusiness: "Transformamos negócios com",
+        webSolutions: "soluções web",
+        kiadDescription: "Na <strong>KIAD</strong> desenvolvemos plataformas digitais que geram <span>resultados mensuráveis</span> e crescimento sustentado para sua empresa.",
+        talkAboutProject: "Vamos falar sobre seu projeto",
+
+        benefits: [
+            {
+                title: "Design web premium",
+                desc: "Sites responsivos que se adaptam perfeitamente a qualquer dispositivo"
+            },
+            {
+                title: "SEO avançado",
+                desc: "Posicionamos sua marca nos primeiros resultados de busca"
+            },
+            {
+                title: "Tecnologia de ponta",
+                desc: "React, Next.js, Tailwind CSS e as mais recentes ferramentas do mercado"
+            },
+            {
+                title: "Desempenho garantido",
+                desc: "Sites ultrarrápidos com otimização de Core Web Vitals"
+            }
+        ],
+
+        slideAlts: [
+            "Projeto Terrazas - Design web premium",
+            "Automotora Virtual - Plataforma de vendas",
+            "PowerFit - Aplicativo fitness interativo"
+        ],
+
+        slideControls: {
+            previous: "Slide anterior",
+            next: "Próximo slide",
+            goToSlide: "Ir para o slide"
+        },
+
+        controlPresence: "Controle e otimize sua",
+        digitalPresence: "presença digital",
+        realTime: "em tempo real",
+        kiadTransformation: "Com KIAD transformamos semanas de desenvolvimento em questão de horas. Nossa plataforma automatiza os processos técnicos enquanto você se concentra em fazer crescer seu negócio.",
+
+        features: [
+            {
+                title: "Design profissional",
+                description: "Mais de 40 modelos premium adaptáveis. Cada design é otimizado para conversão e desempenho."
+            },
+            {
+                title: "Implementação expressa",
+                description: "Seu site online em tempo recorde, com todas as funcionalidades que seu negócio precisa."
+            }
+        ],
+
+        widgetTitles: {
+            deployedSite: "Site implantado",
+            performance: "Desempenho",
+            quickSetup: "Configuração rápida",
+            support: "Suporte 24/7",
+            protection: "Proteção ativa"
+        },
+
+        widgetContent: {
+            siteStatus: "Online - Atualizado há 3 min",
+            visits: "Visitas:",
+            conversion: "Conversão:",
+            lastWeek: "+17% vs semana passada",
+            activeDesign: "Design ativado",
+            activeSections: "3 seções ativas",
+            inactiveBlog: "Blog (inativo)",
+            techSupport: "Suporte técnico",
+            availableNow: "Disponível agora",
+            firewallActive: "Firewall ativo",
+            monitoredSystem: "Sistema monitorado 24/7"
+        },
+
+        widgetButtons: {
+            viewLive: "Ver site ao vivo",
+            customize: "Personalizar",
+            contact: "Contatar",
+            moreInfo: "Mais info"
+        },
+
+        ctaButton: "Descubra como podemos ajudá-lo →",
+
+        whatWeDo_title: "Nossa <span class='text-blue-400'>filosofia</span> de desenvolvimento",
+        whatWeDo_subtitle: "Na KIAD, não criamos apenas sites – construímos ecossistemas digitais completos.",
+        whatWeDo_steps: [
+            {
+                title: "01. Escuta ativa",
+                description: "Começamos cada projeto entendendo sua visão, necessidades e objetivos de negócio."
+            },
+            {
+                title: "02. Design com propósito",
+                description: "Não fazemos apenas interfaces bonitas — criamos experiências que convertem e geram resultados."
+            },
+            {
+                title: "03. Código escalável",
+                description: "Construímos arquiteturas sólidas prontas para crescer com você, usando tecnologia de ponta."
+            },
+            {
+                title: "04. Entrega e melhoria contínua",
+                description: "Lançamos rapidamente, aprendemos com os dados e otimizamos com inteligência artificial."
+            }
+        ],
+        whatWeDo_servicesTitle: "Nossos <span class='text-blue-400'>serviços</span>",
+        whatWeDo_services: [
+            {
+                title: "Desenvolvimento Web",
+                description: "Sites sob medida e plataformas complexas"
+            },
+            {
+                title: "Soluções em Nuvem",
+                description: "Infraestrutura escalável na nuvem"
+            },
+            {
+                title: "Segurança",
+                description: "Proteção avançada para o seu negócio"
+            },
+            {
+                title: "Análise de Dados",
+                description: "Dados para tomar decisões melhores"
+            }
+        ],
+        whatWeDo_successCaseTitle: "Caso de sucesso",
+        whatWeDo_successCaseDesc: "Impulsionamos a presença digital de mais de 10 devs com portfólios modernos e eficazes.",
+        whatWeDo_stats: [
+            { label: "Clientes satisfeitos", value: "100%" },
+            { label: "Suporte ativo", value: "24/7" },
+            { label: "Performance aprimorada", value: "x3" },
+            { label: "Uptime garantido", value: "99.9%" }
+        ],
+        whatWeDo_technologiesTitle: "Tecnologias que dominamos",
+        whatWeDo_processTitle: "Nossa <span class='text-blue-400'>metodologia</span> em 4 fases",
+        whatWeDo_processSubtitle: "Um processo comprovado que garante resultados excepcionais em cada projeto.",
+        whatWeDo_process: [
+            {
+                title: "Descoberta",
+                description: "Análise profunda do seu mercado, concorrência e objetivos de negócio"
+            },
+            {
+                title: "Design",
+                description: "Prototipagem interativa focada em experiência do usuário e conversão"
+            },
+            {
+                title: "Desenvolvimento",
+                description: "Implementação ágil com sprints semanais e entregas contínuas"
+            },
+            {
+                title: "Lançamento",
+                description: "Lançamento monitorado com otimização contínua baseada em dados"
+            }
+        ],
+        whatWeDo_teamTitle: "Conheça a <span class='text-blue-400'>equipe</span>",
+        whatWeDo_teamSubtitle: "Os especialistas que vão transformar sua visão digital em realidade.",
+        whatWeDo_team: [
+            {
+                name: "Tomás",
+                role: "CEO & Backend Lead",
+                specialty: "Arquitetura em Nuvem & Desenvolvimento de APIs",
+                funFact: "Cofundador da KIAD",
+                expertise: ["Node.js", "PostgreSQL", "Microserviços"]
+            },
+            {
+                name: "Ignacio",
+                role: "COO & Product Ops",
+                specialty: "Organização técnica & visão estrutural",
+                funFact: "Cofundador da KIAD",
+                expertise: ["Estrutura de Frontend", "Tech Ops", "Gerenciamento de Entregas"]
+            },
+            {
+                name: "Gonzalo",
+                role: "CXO & Visual Experience",
+                specialty: "UX/UI & planejamento de projetos",
+                funFact: "Cofundador da KIAD",
+                expertise: ["Design Systems", "Planejamento de Projetos", "Experiência do Usuário"]
+            },
+            {
+                name: "Máximo",
+                role: "Growth & Marketing Strategist",
+                specialty: "Estratégias para atrair clientes e crescer a marca",
+                funFact: "Especialista em aquisição & funis",
+                expertise: ["ADS & SEO", "Geração de Leads", "Copywriting"]
+            }
+        ]
+
+
+    },
 
     FR: {
         home: 'Accueil',
@@ -192,12 +793,15 @@ const translations = {
         services: 'Services',
         portfolio: 'Portfolio',
         contact: 'Contact',
-    
+
+        whatWeDo_kpiTitle: "+20 projets lancés",
+        whatWeDo_kpiSubtitle: "depuis l'Amérique latine vers le monde",
+
         discoverServices: 'Découvrez nos services',
         headline1: 'Nous Adaptons la Technologie',
         headline2: 'Nous Propulsons les Entreprises',
         paragraph: 'Nous créons des solutions numériques modernes et évolutives pour les entreprises, les entrepreneurs et les professionnels cherchant une véritable présence digitale.',
-    
+
         startupFocus: 'est une startup spécialisée dans le développement logiciel',
         offerSolutions: 'Nous proposons des solutions numériques intelligentes, conçues par des développeurs qui comprennent ce qui compte.',
         weCombine: 'Nous combinons expérience, stratégie et code',
@@ -216,7 +820,7 @@ const translations = {
         weWork: 'Nous travaillons avec des processus clairs, une communication constante et des résultats mesurables. Vous savez toujours où vous en êtes, sans surprises.',
         closeness: 'Proximité',
         weCare: "Nous nous soucions de votre expérience tout au long du processus. Nous sommes présents avant, pendant et après. Car au-delà du logiciel, c'est vous qui comptez.",
-    
+
         service: 'Services',
         digitalPresence: 'Présence Numérique Professionnelle',
         businesses: "De nombreuses entreprises ont des sites web obsolètes, mal conçus ou même pas de présence en ligne. Pour résoudre ce problème, nous créons des pages d'atterrissage modernes et attrayantes, des boutiques en ligne entièrement fonctionnelles et adaptées à leurs besoins, tout en assurant un SEO optimal et une compatibilité mobile.",
@@ -230,12 +834,12 @@ const translations = {
         manyBusinessesandProfessionals: "De nombreuses entreprises et professionnels se limitent à Instagram ou WhatsApp, perdant ainsi clients et opportunités. Nous créons une landing page professionnelle avec leur offre/leur menu, mettons en place un système de réservation ou de commande en ligne et développons un e-commerce intégré pour vendre facilement leurs produits (compléments, billets, forfaits ou tout autre article).",
         webSecurity: 'Sécurité et Protection Web',
         manyWebsites: "De nombreux sites web ne disposent pas d'une protection adéquate contre les menaces numériques, mettant en péril les données de l'entreprise et celles des clients. Chez KIAD, nous mettons en place des mesures de sécurité solides : certificats SSL, pare-feu, systèmes anti-spam et protections contre les attaques (injections SQL, DDoS, etc.). Nous configurons également des politiques de confidentialité, des mentions légales et adaptons votre site aux réglementations telles que le RGPD, garantissant ainsi une expérience sûre, professionnelle et fiable pour vos visiteurs.",
-    
+
         weTransform: 'Nous transformons des idées en expériences numériques réelles.',
-    
+
         ourProjects: 'Nos Projets',
         learnAbout: "Découvrez certains des projets que nous avons développés chez KIAD. Des expériences visuelles marquantes aux solutions fonctionnelles démontrant notre potentiel et notre créativité.",
-    
+
         contactUs: 'Contactez-nous',
         completeTheForm: "Remplissez le formulaire et nous vous contacterons pour comprendre vos besoins et vous aider à atteindre vos objectifs.",
         name: 'Nom...',
@@ -244,9 +848,197 @@ const translations = {
         send: 'Envoyer',
         successMessage: 'Message envoyé !',
         errorMessage: "Quelque chose s'est mal passé !",
-    
+        whatWeDo_kpiTitle: "+20 gestartete Projekte",
+        whatWeDo_kpiSubtitle: "von Lateinamerika in die Welt",
+
         motto: 'Où le code précis propulse les ambitions commerciales.',
-    },    
+
+        digitalPower: "PUISSANCE NUMÉRIQUE",
+        transformBusiness: "Nous transformons les entreprises avec",
+        webSolutions: "des solutions web",
+        kiadDescription: "Chez <strong>KIAD</strong>, nous développons des plateformes numériques qui génèrent <span>des résultats mesurables</span> et une croissance soutenue pour votre entreprise.",
+        talkAboutProject: "Parlons de votre projet",
+
+        benefits: [
+            {
+                title: "Design web premium",
+                desc: "Des sites réactifs qui s'adaptent parfaitement à tout appareil"
+            },
+            {
+                title: "SEO avancé",
+                desc: "Nous positionnons votre marque dans les premiers résultats de recherche"
+            },
+            {
+                title: "Technologie de pointe",
+                desc: "React, Next.js, Tailwind CSS et les derniers outils du marché"
+            },
+            {
+                title: "Performance garantie",
+                desc: "Des sites ultra-rapides avec optimisation Core Web Vitals"
+            }
+        ],
+
+        slideAlts: [
+            "Projet Terrazas - Design web premium",
+            "Concessionnaire virtuel - Plateforme de vente",
+            "PowerFit - Application fitness interactive"
+        ],
+
+        slideControls: {
+            previous: "Slide précédent",
+            next: "Slide suivant",
+            goToSlide: "Aller au slide"
+        },
+
+        controlPresence: "Contrôlez et optimisez votre",
+        digitalPresence: "présence numérique",
+        realTime: "en temps réel",
+        kiadTransformation: "Avec KIAD, nous transformons des semaines de développement en quelques heures. Notre plateforme automatise les processus techniques pendant que vous vous concentrez sur la croissance de votre entreprise.",
+
+        features: [
+            {
+                title: "Design professionnel",
+                description: "Plus de 40 modèles premium adaptables. Chaque design est optimisé pour la conversion et les performances."
+            },
+            {
+                title: "Implémentation express",
+                description: "Votre site en ligne en un temps record, avec toutes les fonctionnalités dont votre entreprise a besoin."
+            }
+        ],
+
+        widgetTitles: {
+            deployedSite: "Site déployé",
+            performance: "Performance",
+            quickSetup: "Configuration rapide",
+            support: "Support 24/7",
+            protection: "Protection active"
+        },
+
+        widgetContent: {
+            siteStatus: "En ligne - Mis à jour il y a 3 min",
+            visits: "Visites:",
+            conversion: "Conversion:",
+            lastWeek: "+17% vs semaine dernière",
+            activeDesign: "Design activé",
+            activeSections: "3 sections actives",
+            inactiveBlog: "Blog (inactif)",
+            techSupport: "Support technique",
+            availableNow: "Disponible maintenant",
+            firewallActive: "Firewall actif",
+            monitoredSystem: "Système surveillé 24/7"
+        },
+
+        widgetButtons: {
+            viewLive: "Voir le site en direct",
+            customize: "Personnaliser",
+            contact: "Contacter",
+            moreInfo: "Plus d'info"
+        },
+
+        ctaButton: "Découvrez comment nous pouvons vous aider →",
+
+        whatWeDo_title: "Notre <span class='text-blue-400'>philosophie</span> de développement",
+        whatWeDo_subtitle: "Chez KIAD, nous ne créons pas simplement des sites web – nous construisons des écosystèmes numériques complets.",
+        whatWeDo_steps: [
+            {
+                title: "01. Écoute active",
+                description: "Chaque projet commence par une compréhension approfondie de votre vision, de vos besoins et de vos objectifs commerciaux."
+            },
+            {
+                title: "02. Design avec intention",
+                description: "Nous ne faisons pas que de belles interfaces : nous concevons des expériences qui convertissent et produisent des résultats."
+            },
+            {
+                title: "03. Code évolutif",
+                description: "Nous construisons des architectures solides prêtes à évoluer avec vous, en utilisant les technologies les plus avancées."
+            },
+            {
+                title: "04. Livraison et amélioration continue",
+                description: "Nous lançons rapidement, apprenons à partir des données et optimisons grâce à l’intelligence artificielle."
+            }
+        ],
+        whatWeDo_servicesTitle: "Nos <span class='text-blue-400'>services</span>",
+        whatWeDo_services: [
+            {
+                title: "Développement Web",
+                description: "Sites sur mesure et plateformes complexes"
+            },
+            {
+                title: "Solutions Cloud",
+                description: "Infrastructure évolutive dans le cloud"
+            },
+            {
+                title: "Sécurité",
+                description: "Protection avancée pour votre entreprise"
+            },
+            {
+                title: "Analyse de données",
+                description: "Des données pour prendre de meilleures décisions"
+            }
+        ],
+        whatWeDo_successCaseTitle: "Cas de succès",
+        whatWeDo_successCaseDesc: "Nous avons renforcé la présence digitale de plus de 10 développeurs avec des portfolios modernes et efficaces.",
+        whatWeDo_stats: [
+            { label: "Clients satisfaits", value: "100%" },
+            { label: "Support actif", value: "24/7" },
+            { label: "Performance améliorée", value: "x3" },
+            { label: "Disponibilité garantie", value: "99.9%" }
+        ],
+        whatWeDo_technologiesTitle: "Technologies que nous maîtrisons",
+        whatWeDo_processTitle: "Notre <span class='text-blue-400'>méthodologie</span> en 4 phases",
+        whatWeDo_processSubtitle: "Un processus éprouvé qui garantit des résultats exceptionnels pour chaque projet.",
+        whatWeDo_process: [
+            {
+                title: "Découverte",
+                description: "Analyse approfondie de votre marché, de la concurrence et des objectifs commerciaux"
+            },
+            {
+                title: "Conception",
+                description: "Prototypage interactif centré sur l’expérience utilisateur et la conversion"
+            },
+            {
+                title: "Développement",
+                description: "Mise en œuvre agile avec des sprints hebdomadaires et des livraisons continues"
+            },
+            {
+                title: "Déploiement",
+                description: "Lancement surveillé avec optimisation continue basée sur les données"
+            }
+        ],
+        whatWeDo_teamTitle: "Rencontrez notre <span class='text-blue-400'>équipe</span>",
+        whatWeDo_teamSubtitle: "Les experts qui concrétiseront votre vision numérique.",
+        whatWeDo_team: [
+            {
+                name: "Tomás",
+                role: "CEO & Responsable Backend",
+                specialty: "Architecture Cloud & Développement d'API",
+                funFact: "Cofondateur de KIAD",
+                expertise: ["Node.js", "PostgreSQL", "Microservices"]
+            },
+            {
+                name: "Ignacio",
+                role: "COO & Product Ops",
+                specialty: "Organisation technique & vision structurelle",
+                funFact: "Cofondateur de KIAD",
+                expertise: ["Architecture Frontend", "Tech Ops", "Gestion des livraisons"]
+            },
+            {
+                name: "Gonzalo",
+                role: "CXO & Expérience Visuelle",
+                specialty: "UX/UI & planification de projets",
+                funFact: "Cofondateur de KIAD",
+                expertise: ["Systèmes de Design", "Planification de projet", "Expérience Utilisateur"]
+            },
+            {
+                name: "Máximo",
+                role: "Stratège en Croissance & Marketing",
+                specialty: "Stratégies pour attirer des clients et développer la marque",
+                funFact: "Spécialiste en acquisition & funnels",
+                expertise: ["ADS & SEO", "Génération de leads", "Rédaction persuasive"]
+            }
+        ]
+
+    },
 
     DE: {
         home: 'Startseite',
@@ -259,7 +1051,7 @@ const translations = {
         headline1: 'Wir machen Technologie anpassbar',
         headline2: 'Wir treiben Unternehmen voran',
         paragraph: 'Wir schaffen moderne und skalierbare digitale Lösungen für Unternehmen, Unternehmer und Fachleute, die eine echte digitale Präsenz suchen.',
-        
+
         startupFocus: 'ist ein Startup mit Fokus auf Softwareentwicklung',
         offerSolutions: 'Wir bieten intelligente digitale Lösungen, die von Entwicklern entwickelt werden, die wissen, worauf es ankommt.',
         weCombine: 'Wir kombinieren Erfahrung, Strategie und Code',
@@ -292,7 +1084,7 @@ const translations = {
         manyBusinessesandProfessionals: 'Viele Unternehmen und Fachleute beschränken sich darauf, ausschließlich über Instagram oder WhatsApp zu agieren und verlieren dadurch Kunden und Verkaufschancen. Wir haben dies gelöst, indem wir eine professionelle Zielseite mit Ihren Diensten/Ihrer Speisekarte erstellt, ein Online-Buchungs- oder Bestellsystem implementiert und eine integrierte E-Commerce-Plattform entwickelt haben, damit Sie Ihre Produkte (Ergänzungen, Tickets, Pläne oder andere Artikel) einfach verkaufen können.',
         webSecurity: 'Web-Sicherheit und -Schutz',
         manyWebsites: 'Viele Websites verfügen nicht über einen ausreichenden Schutz vor digitalen Bedrohungen, wodurch sowohl Geschäfts- als auch Kundeninformationen gefährdet werden. Bei KIAD implementieren wir robuste Sicherheitsmaßnahmen: SSL-Zertifikate, Firewalls, Anti-Spam-Systeme und Schutz vor Angriffen wie SQL-Injections oder DDoS. Wir erstellen außerdem Datenschutzrichtlinien und rechtliche Hinweise und passen Ihre Site an Vorschriften wie die DSGVO an, um Besuchern ein sicheres, professionelles und zuverlässiges Erlebnis zu gewährleisten.',
-        
+
         weTransform: 'Wir verwandeln Ideen in echte digitale Erlebnisse.',
 
         ourProjects: 'Unsere Projekte',
@@ -309,7 +1101,196 @@ const translations = {
 
         motto: 'Wo präziser Code die Geschäftsambitionen vorantreibt.',
         rightsReserved: 'Alle Rechte vorbehalten.',
-    }
-    };
 
-    export default translations;
+        digitalPower: "DIGITALE KRAFT",
+        transformBusiness: "Wir verwandeln Unternehmen mit",
+        webSolutions: "Web-Lösungen",
+        kiadDescription: "Bei <strong>KIAD</strong> entwickeln wir digitale Plattformen, die <span>messbare Ergebnisse</span> und nachhaltiges Wachstum für Ihr Unternehmen generieren.",
+        talkAboutProject: "Lassen Sie uns über Ihr Projekt sprechen",
+
+        benefits: [
+            {
+                title: "Premium Webdesign",
+                desc: "Responsive Websites, die sich perfekt an jedes Gerät anpassen"
+            },
+            {
+                title: "Erweiterte SEO",
+                desc: "Wir positionieren Ihre Marke in den Top-Suchergebnissen"
+            },
+            {
+                title: "Hochmoderne Technologie",
+                desc: "React, Next.js, Tailwind CSS und die neuesten Markttools"
+            },
+            {
+                title: "Garantierte Leistung",
+                desc: "Ultra-schnelle Websites mit Core Web Vitals-Optimierung"
+            }
+        ],
+
+        slideAlts: [
+            "Terrazas-Projekt - Premium Webdesign",
+            "Virtuelle Autohandelsplattform",
+            "PowerFit - Interaktive Fitnessanwendung"
+        ],
+
+        slideControls: {
+            previous: "Vorherige Folie",
+            next: "Nächste Folie",
+            goToSlide: "Gehe zu Folie"
+        },
+        whatWeDo_kpiTitle: "+20 gestartete Projekte",
+        whatWeDo_kpiSubtitle: "von Lateinamerika in die Welt",
+
+        // Neue Übersetzungen für WhoWeAre
+        controlPresence: "Kontrollieren und optimieren Sie Ihre",
+        digitalPresence: "digitale Präsenz",
+        realTime: "in Echtzeit",
+        kiadTransformation: "Mit KIAD verwandeln wir Wochen der Entwicklung in eine Frage von Stunden. Unsere Plattform automatisiert technische Prozesse, während Sie sich auf das Wachstum Ihres Unternehmens konzentrieren.",
+
+        features: [
+            {
+                title: "Professionelles Design",
+                description: "Über 40 anpassbare Premium-Vorlagen. Jedes Design ist für Konversion und Leistung optimiert."
+            },
+            {
+                title: "Express-Implementierung",
+                description: "Ihre Website in Rekordzeit online, mit allen Funktionen, die Ihr Unternehmen benötigt."
+            }
+        ],
+
+        widgetTitles: {
+            deployedSite: "Bereitgestellte Website",
+            performance: "Leistung",
+            quickSetup: "Schnelle Einrichtung",
+            support: "24/7 Support",
+            protection: "Aktiver Schutz"
+        },
+
+        widgetContent: {
+            siteStatus: "Online - Vor 3 Min. aktualisiert",
+            visits: "Besuche:",
+            conversion: "Konversion:",
+            lastWeek: "+17% vs letzte Woche",
+            activeDesign: "Design aktiviert",
+            activeSections: "3 aktive Abschnitte",
+            inactiveBlog: "Blog (inaktiv)",
+            techSupport: "Technischer Support",
+            availableNow: "Jetzt verfügbar",
+            firewallActive: "Firewall aktiv",
+            monitoredSystem: "System 24/7 überwacht"
+        },
+
+        widgetButtons: {
+            viewLive: "Live-Website ansehen",
+            customize: "Anpassen",
+            contact: "Kontakt",
+            moreInfo: "Mehr Info"
+        },
+
+        ctaButton: "Entdecken Sie, wie wir Ihnen helfen können →",
+
+
+        whatWeDo_title: "Unsere <span class='text-blue-400'>Entwicklungsphilosophie</span>",
+        whatWeDo_subtitle: "Bei KIAD erstellen wir nicht nur Websites – wir bauen vollständige digitale Ökosysteme.",
+        whatWeDo_steps: [
+            {
+                title: "01. Aktives Zuhören",
+                description: "Jedes Projekt beginnt mit einem tiefen Verständnis deiner Vision, Bedürfnisse und Geschäftsziele."
+            },
+            {
+                title: "02. Design mit Absicht",
+                description: "Wir erstellen nicht nur schöne Oberflächen – wir gestalten Erlebnisse, die konvertieren und Ergebnisse liefern."
+            },
+            {
+                title: "03. Skalierbarer Code",
+                description: "Wir entwickeln robuste Architekturen, die mit dir wachsen – mit modernster Technologie."
+            },
+            {
+                title: "04. Schnelle Lieferung & kontinuierliche Verbesserung",
+                description: "Wir veröffentlichen schnell, lernen aus Daten und optimieren mit künstlicher Intelligenz."
+            }
+        ],
+        whatWeDo_servicesTitle: "Unsere <span class='text-blue-400'>Dienstleistungen</span>",
+        whatWeDo_services: [
+            {
+                title: "Webentwicklung",
+                description: "Maßgeschneiderte Websites & komplexe Plattformen"
+            },
+            {
+                title: "Cloud-Lösungen",
+                description: "Skalierbare Infrastruktur in der Cloud"
+            },
+            {
+                title: "Sicherheit",
+                description: "Erweiterter Schutz für dein Unternehmen"
+            },
+            {
+                title: "Datenanalyse",
+                description: "Daten für bessere Geschäftsentscheidungen"
+            }
+        ],
+        whatWeDo_successCaseTitle: "Erfolgsfall",
+        whatWeDo_successCaseDesc: "Wir haben die digitale Präsenz von über 10 Entwicklern mit modernen und effektiven Portfolios gestärkt.",
+        whatWeDo_stats: [
+            { label: "Zufriedene Kunden", value: "100%" },
+            { label: "Aktiver Support", value: "24/7" },
+            { label: "Verbesserte Leistung", value: "x3" },
+            { label: "Garantierte Verfügbarkeit", value: "99,9%" }
+        ],
+        whatWeDo_technologiesTitle: "Technologien, die wir beherrschen",
+        whatWeDo_processTitle: "Unsere <span class='text-blue-400'>Methodik</span> in 4 Phasen",
+        whatWeDo_processSubtitle: "Ein bewährter Prozess, der außergewöhnliche Ergebnisse für jedes Projekt garantiert.",
+        whatWeDo_process: [
+            {
+                title: "Entdecken",
+                description: "Tiefgehende Analyse deines Marktes, der Konkurrenz und der Geschäftsziele"
+            },
+            {
+                title: "Design",
+                description: "Interaktives Prototyping mit Fokus auf Benutzererlebnis und Konversion"
+            },
+            {
+                title: "Entwicklung",
+                description: "Agile Umsetzung mit wöchentlichen Sprints und kontinuierlicher Lieferung"
+            },
+            {
+                title: "Bereitstellung",
+                description: "Überwachter Launch mit kontinuierlicher, datengesteuerter Optimierung"
+            }
+        ],
+        whatWeDo_teamTitle: "Lerne unser <span class='text-blue-400'>Team</span> kennen",
+        whatWeDo_teamSubtitle: "Die Experten, die deine digitale Vision Wirklichkeit werden lassen.",
+        whatWeDo_team: [
+            {
+                name: "Tomás",
+                role: "CEO & Backend Lead",
+                specialty: "Cloud-Architektur & API-Entwicklung",
+                funFact: "Mitbegründer von KIAD",
+                expertise: ["Node.js", "PostgreSQL", "Microservices"]
+            },
+            {
+                name: "Ignacio",
+                role: "COO & Product Ops",
+                specialty: "Technische Organisation & strukturelle Vision",
+                funFact: "Mitbegründer von KIAD",
+                expertise: ["Frontend-Architektur", "Tech Ops", "Liefermanagement"]
+            },
+            {
+                name: "Gonzalo",
+                role: "CXO & Visual Experience",
+                specialty: "UX/UI & Projektplanung",
+                funFact: "Mitbegründer von KIAD",
+                expertise: ["Design-Systeme", "Projektplanung", "UX für Kunden"]
+            },
+            {
+                name: "Máximo",
+                role: "Wachstums- & Marketingstratege",
+                specialty: "Strategien zur Kundengewinnung & Markenwachstum",
+                funFact: "Spezialist für Akquise & Funnels",
+                expertise: ["ADS & SEO", "Lead-Generierung", "Copywriting"]
+            }
+        ]
+    },
+};
+
+export default translations;

@@ -6,11 +6,12 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useState('ES');
     const t = (key) => {
-        return translations[language][key] || key;
+        const keys = key.split('.');
+        return keys.reduce((acc, k) => acc?.[k], translations[language]) || key;
     };
     return (
         <LanguageContext.Provider value={{ language, setLanguage, t }}>
-        {children}
+            {children}
         </LanguageContext.Provider>
     );
 };

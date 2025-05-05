@@ -1,35 +1,18 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import powerfit from '../../assets/im1.png';
-import automotora from '../../assets/im2.png';
-import terrazas from '../../assets/im3.png';
+import powerfit from '../../assets/1212.png';
+import automotora from '../../assets/im1.png';
+import terrazas from '../../assets/im2.png';
+import { useLanguage } from '../../context/LanguageContext';
 
 const slides = [
-  { image: terrazas, alt: 'Proyecto Terrazas - Diseño web premium' },
-  { image: automotora, alt: 'Automotora Virtual - Plataforma de ventas' },
-  { image: powerfit, alt: 'PowerFit - Aplicación fitness interactiva' }
-];
-
-const benefits = [
-  {
-    title: "Diseño web premium",
-    desc: "Sitios responsive que se adaptan perfectamente a cualquier dispositivo"
-  },
-  {
-    title: "SEO avanzado",
-    desc: "Posicionamos tu marca en los primeros resultados de búsqueda"
-  },
-  {
-    title: "Tecnología de punta",
-    desc: "React, Next.js, Tailwind CSS y las últimas herramientas del mercado"
-  },
-  {
-    title: "Rendimiento garantizado",
-    desc: "Webs ultrarrápidas con optimización de Core Web Vitals"
-  }
+  { image: terrazas },
+  { image: automotora },
+  { image: powerfit }
 ];
 
 export default function WhatWeDo() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 });
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,11 +37,11 @@ export default function WhatWeDo() {
   };
 
   return (
-    <section
+    <section id='whoweare'
       ref={ref}
       className="w-full min-h-screen bg-gray-950 text-white px-6 py-20 md:py-32 flex items-center justify-center relative"
     >
-      {/* Efectos de fondo similares a Who We Are */}
+      {/* Efectos de fondo */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-600 blur-3xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/3 w-80 h-80 rounded-full bg-blue-800 blur-3xl opacity-15 animate-pulse delay-300"></div>
@@ -74,7 +57,7 @@ export default function WhatWeDo() {
         >
           <div className="space-y-4">
             <span className="inline-block px-4 py-2 bg-blue-900/30 text-blue-400 rounded-full text-sm font-medium tracking-wider">
-              POTENCIA DIGITAL
+              {t('digitalPower')}
             </span>
 
             <motion.h2
@@ -82,9 +65,10 @@ export default function WhatWeDo() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              Transformamos negocios con <span className="text-blue-400">soluciones web</span>
-            </motion.h2>
+              dangerouslySetInnerHTML={{
+                __html: `${t('transformBusiness')} <span class="text-blue-400">${t('webSolutions')}</span>`
+              }}
+            />
           </div>
 
           <motion.p
@@ -92,12 +76,13 @@ export default function WhatWeDo() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            En <span className="font-semibold text-white">KIAD</span> desarrollamos plataformas digitales que generan <span className="text-blue-400">resultados medibles</span> y crecimiento sostenido para tu empresa.
-          </motion.p>
+            dangerouslySetInnerHTML={{
+              __html: t('kiadDescription')
+            }}
+          />
 
           <div className="grid grid-cols-1 gap-4">
-            {benefits.map((item, index) => (
+            {t('benefits', { returnObjects: true }).map((item, index) => (
               <motion.div
                 key={index}
                 className="group"
@@ -127,7 +112,7 @@ export default function WhatWeDo() {
               href="#contact"
               className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg text-lg transition-all duration-300 transform hover:scale-105 mt-6"
             >
-              Hablemos de tu proyecto
+              {t('talkAboutProject')}
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
@@ -149,7 +134,7 @@ export default function WhatWeDo() {
               <motion.img
                 key={currentSlide}
                 src={slides[currentSlide].image}
-                alt={slides[currentSlide].alt}
+                alt={t(`slideAlts.${currentSlide}`)}
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 custom={direction}
                 initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
@@ -169,7 +154,7 @@ export default function WhatWeDo() {
                     setCurrentSlide(index);
                   }}
                   className={`w-3 h-3 rounded-full transition-all ${currentSlide === index ? 'bg-white w-6' : 'bg-gray-500/50'}`}
-                  aria-label={`Ir al slide ${index + 1}`}
+                  aria-label={`${t('slideControls.goToSlide')} ${index + 1}`}
                 />
               ))}
             </div>
@@ -177,7 +162,7 @@ export default function WhatWeDo() {
             <button
               onClick={prevSlide}
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-900/50 hover:bg-gray-800/80 p-2 rounded-full z-20 transition-all"
-              aria-label="Slide anterior"
+              aria-label={t('slideControls.previous')}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
@@ -187,7 +172,7 @@ export default function WhatWeDo() {
             <button
               onClick={nextSlide}
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-900/50 hover:bg-gray-800/80 p-2 rounded-full z-20 transition-all"
-              aria-label="Siguiente slide"
+              aria-label={t('slideControls.next')}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
